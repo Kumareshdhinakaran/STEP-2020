@@ -1,0 +1,28 @@
+First Day
+
+Assignment 1 ( List Assignment)
+https://codepen.io/jeunesse/pen/QWyLdav
+
+Assignment 2 ( Recreate Webpage)
+https://codepen.io/jeunesse/pen/OJMLWGW
+
+Assignment 3 (Pokemon)
+https://codepen.io/jeunesse/pen/rNxByVP
+
+Assignment 4 (Form)
+https://codepen.io/jeunesse/pen/vYLBJxy
+
+
+Second Day
+
+Assignment 1 (Css_projects)
+https://codepen.io/jeunesse/pen/YzwKjoP
+
+Assignment 2 (tic-tac-board)
+https://codepen.io/jeunesse/pen/wvMwEEj
+
+Assignment 3 (Image gallery (optional))
+https://codepen.io/jeunesse/pen/eYJOLxq
+
+Assignment 4 (Blog post)
+https://codepen.io/jeunesse/pen/mdVbzEx
