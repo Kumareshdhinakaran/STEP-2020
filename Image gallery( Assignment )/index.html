@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Navbars</title>
+  <!----------------------      This are the new version of Bootstrap Files
+      (To achieve this, I have done lot of modification since many css classes are deprecated in newer version) ------->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-----------------Ends here ----------------->
+
+   <!---------------------Styles---------------------->
+  <style type="text/css">
+    .jumbotron {
+      color: #2c3e50;
+      background: #ecf0f1;
+      margin-top: 30px;
+      margin-bottom:-2px;
+    }
+    .navbar-dark {
+      background: #2c3e50;
+      color: white;
+    }
+    .navbar-dark .navbar-brand, .navbar-dark a{
+      color:white;
+    }
+    .navbar-dark .navbar-nav>li>a {
+      color: white;
+    } 
+    .navbar-toggler-icon{
+      color: white;
+    }
+    a{
+      margin: 0.5rem;
+    }
+    img{
+      margin-top: 2rem;
+    }
+    .navbar-dark .navbar-toggler {
+      border-color: rgba(255, 255, 255,0.5);
+    }
+    .navbar-dark .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  </style>
+  <!-----------------------Ends here------------------------->
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a href="#" class="navbar-brand"><i class="fa fa-image"></i> IMGS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-nav-demo" aria-controls="bs-nav-demo" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="bs-nav-demo">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li><a href="#">Sign Up </a></li>
+                <li><a href="#">Login </a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="container mb-5">
+    <div class="jumbotron text-center">
+        <h1><i class="fa fa-camera-retro"></i></span> The Image Gallery </h1>
+        <p>A bunch of beautiful images that I didn't take (Except for the first one!)</p> 
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1591322128797-1137c2e39804?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1435771112039-1e5b2bcad966?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1450&h=825&fit=crop&s=bfda9916c885869b43b70738693428d9" class="img-thumbnail">
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1444090542259-0af8fa96557e?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1434543177303-ef2cc7707e0d?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1436262513933-a0b06755c784?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1439396087961-98bc12c21176?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="https://images.unsplash.com/photo-1439694458393-78ecf14da7f9?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" class="img-thumbnail">
+      </div>
+  </div>
+
+  
+<!---------------------------------This are the new version of Bootstrap Files----------------------------------------
+      (To achieve this, I have done lot of modification since many css classes are deprecated in newer version) ------->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <!-----------------Ends here ----------------->
+</body>
+</html>

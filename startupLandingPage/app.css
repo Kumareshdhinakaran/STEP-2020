@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap");
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero::before {
+  content: "";
+  background: url("https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.btn {
+  background-color: rgba(107, 114, 100, 0.9);
+}
+html {
+  height: 100%;
+}
+h1 {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 45px;
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.contents {
+  margin-top: 15%;
+  position: relative;
+  color: black;
+  text-align: center;
+  text-shadow: 0 0 1px #f0f000;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+  font-size: 20px;
+}
+hr {
+  width: 330px;
+  background-color: #42552f;
+}
+.navbar-dark {
+  background-color: rgba(107, 114, 100, 0.9);
+}
+.navbar {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 18px;
+}
+.navbar-brand {
+  font-weight: 600;
+  font-size: 25px;
+}

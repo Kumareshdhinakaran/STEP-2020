@@ -1,10 +1,9 @@
 {
-  "workbench.preferredDarkColorTheme": "Monokai",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "workbench.iconTheme": "material-icon-theme",
   "search.useGlobalIgnoreFiles": true,
   "terminal.integrated.fontSize": 15,
   "advancedNewFile.convenienceOptions": ["last", "current", "root"],
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "One Dark Pro"
 }
