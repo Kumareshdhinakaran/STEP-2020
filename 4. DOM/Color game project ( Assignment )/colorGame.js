@@ -11,10 +11,8 @@ var buttons = document.querySelectorAll(".buttons");
 init();
 
 function init() {
-  numSquares = 6;
-  reset();
-  gamePageSetup();
   gameModesSetup();
+  gamePageSetup();
   resetButton.addEventListener("click", function () {
     reset();
   });
@@ -23,6 +21,7 @@ function init() {
 //Easy and hard mode's squares setup
 function gameModesSetup() {
   for (var i = 0; i < buttons.length; i++) {
+    numSquares = 6; //default mode
     buttons[i].addEventListener("click", function () {
       buttons[0].classList.remove("selected");
       buttons[1].classList.remove("selected");
@@ -34,6 +33,7 @@ function gameModesSetup() {
       }
       reset();
     });
+    reset();
   }
 }
 
