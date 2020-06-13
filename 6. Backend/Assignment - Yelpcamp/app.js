@@ -17,6 +17,51 @@ var campGrounds = [
     img:
       "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
   },
+  {
+    name: "Salmon creek",
+    img:
+      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
+  },
+  {
+    name: "Granite Hill",
+    img:
+      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
+  },
+  {
+    name: "Mountain Goat",
+    img:
+      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
+  },
+  {
+    name: "Salmon creek",
+    img:
+      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
+  },
+  {
+    name: "Granite Hill",
+    img:
+      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
+  },
+  {
+    name: "Mountain Goat",
+    img:
+      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
+  },
+  {
+    name: "Salmon creek",
+    img:
+      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
+  },
+  {
+    name: "Granite Hill",
+    img:
+      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
+  },
+  {
+    name: "Mountain Goat",
+    img:
+      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
+  },
 ];
 
 app.use(bodyParser.urlencoded({ extended: true }));
