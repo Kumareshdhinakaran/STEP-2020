@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faker Assignment</title>
+  </head>
+  <body>
+    <h1>Faker Assignment</h1>
+    <table>
+      <tr>
+        <td style="font-weight: bold; font-size: 25px;">Product Name</td>
+        <td style="font-weight: bold; font-size: 25px;">Price</td>
+      </tr>
+      <% for(let item in data){ %>
+      <tr>
+        <td><%= item %></td>
+        <td>$<%= data[item]%></td>
+      </tr>
+      <%}%>
+    </table>
+  </body>
+</html>
