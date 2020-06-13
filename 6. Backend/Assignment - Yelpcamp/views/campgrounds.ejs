@@ -1,4 +1,5 @@
-<% data.forEach(function(dat){ %>
-<p><%=dat.name%></p>
-<img src="<%=dat.img%>" />
-<%});%>
+<%- include ('partial/header') %> <% data.forEach(function(data){ %>
+<p><%=data.name%></p>
+<img src="<%=data.img%>" />
+
+<%});%> <%- include ('partial/footer') %>
