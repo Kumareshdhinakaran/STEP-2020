@@ -15,15 +15,14 @@
   </header>
   <div class="row" style="display: flex; flex-wrap: wrap;">
     <% data.forEach(function(data){ %>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-4 col-sm-6">
       <div class="card">
         <img class="card-img-top" src="<%=data.img%>" alt="<%=data.name%>" />
         <div class="card-body">
           <h4 class="card-title"><%=data.name%></h4>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-            illum.
-          </p>
+          <a href="/campgrounds/<%=data.id%>" class="btn btn-primary"
+            >More info</a
+          >
         </div>
       </div>
     </div>

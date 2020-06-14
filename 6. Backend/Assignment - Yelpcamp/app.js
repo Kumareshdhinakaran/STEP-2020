@@ -1,68 +1,21 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var campGrounds = [
-  {
-    name: "Salmon creek",
-    img:
-      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
-  },
-  {
-    name: "Granite Hill",
-    img:
-      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
-  },
-  {
-    name: "Mountain Goat",
-    img:
-      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
-  },
-  {
-    name: "Salmon creek",
-    img:
-      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
-  },
-  {
-    name: "Granite Hill",
-    img:
-      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
-  },
-  {
-    name: "Mountain Goat",
-    img:
-      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
-  },
-  {
-    name: "Salmon creek",
-    img:
-      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
-  },
-  {
-    name: "Granite Hill",
-    img:
-      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
-  },
-  {
-    name: "Mountain Goat",
-    img:
-      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
-  },
-  {
-    name: "Salmon creek",
-    img:
-      "http://www.abutimes.com/wp-content/uploads/2014/07/lantern-campsite-mount-abu.jpg",
-  },
-  {
-    name: "Granite Hill",
-    img:
-      "https://pix6.agoda.net/hotelImages/6425194/-1/18f40048a640be5daf4c6dd1ff4bf0b6.jpg?s=1024x768",
-  },
-  {
-    name: "Mountain Goat",
-    img:
-      "https://pawnacamp.com/wp-content/uploads/2018/01/Pawna-lake-camping-camp-F-new.jpg",
-  },
-];
+var express = require("express"),
+  app = express(),
+  bodyParser = require("body-parser"),
+  port = 5000,
+  mongoose = require("mongoose");
+
+mongoose.connect("mongodb://localhost:27017/yelp_camp", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+var campgroundSchema = new mongoose.Schema({
+  name: String,
+  img: String,
+  description: String,
+});
+
+var campground = mongoose.model("Campground", campgroundSchema);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -72,20 +25,46 @@ app.get("/", function (req, res) {
 });
 
 app.get("/campgrounds", function (req, res) {
-  res.render("campgrounds", { data: campGrounds });
+  campground.find({}, function (err, allCampGrounds) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("campgrounds", { data: allCampGrounds });
+    }
+  });
 });
 
 app.post("/campgrounds", function (req, res) {
   var name = req.body.name;
   var image = req.body.image;
-  var newCamp = { name: name, img: image };
-  campGrounds.push(newCamp);
+  var description = req.body.description;
+  var newCamp = { name: name, img: image, description: description };
+  campground.create(newCamp, function (err, campGround) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Successfully added");
+      console.log(campGround);
+    }
+  });
   res.redirect("/campgrounds");
 });
 
 app.get("/campgrounds/new", function (req, res) {
   res.render("newcamp");
 });
-app.listen(5000, function () {
+
+app.get("/campgrounds/:id", function (req, res) {
+  var newId = mongoose.Types.ObjectId(req.params.id);
+  campground.find({ _id: newId }, function (err, campGround) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(campGround);
+      res.render("description", { data: campGround[0] });
+    }
+  });
+});
+app.listen(port, function () {
   console.log("Server started Successfully");
 });
