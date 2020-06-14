@@ -29,7 +29,7 @@ app.get("/campgrounds", function (req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render("campgrounds", { data: allCampGrounds });
+      res.render("index", { data: allCampGrounds });
     }
   });
 });
@@ -44,7 +44,6 @@ app.post("/campgrounds", function (req, res) {
       console.log(err);
     } else {
       console.log("Successfully added");
-      console.log(campGround);
     }
   });
   res.redirect("/campgrounds");
@@ -55,13 +54,11 @@ app.get("/campgrounds/new", function (req, res) {
 });
 
 app.get("/campgrounds/:id", function (req, res) {
-  var newId = mongoose.Types.ObjectId(req.params.id);
-  campground.find({ _id: newId }, function (err, campGround) {
+  campground.findById(req.params.id, function (err, campGround) {
     if (err) {
       console.log(err);
     } else {
-      console.log(campGround);
-      res.render("description", { data: campGround[0] });
+      res.render("show", { data: campGround });
     }
   });
 });

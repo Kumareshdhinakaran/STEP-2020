@@ -1,7 +1,7 @@
 <%- include ('partial/header') %>
 <div class="container">
   <header class="jumbotron mt-4">
-    <h1 class="display-3">Welcome To YelpCamp</h1>
+    <h1 class="display-3 font-weight-bold">Welcome To YelpCamp</h1>
 
     <p class="lead">
       View our handpicked campgrounds from all over the world!!!
@@ -20,7 +20,7 @@
         <img class="card-img-top" src="<%=data.img%>" alt="<%=data.name%>" />
         <div class="card-body">
           <h4 class="card-title"><%=data.name%></h4>
-          <a href="/campgrounds/<%=data.id%>" class="btn btn-primary"
+          <a href="/campgrounds/<%=data._id%>" class="btn btn-primary"
             >More info</a
           >
         </div>
