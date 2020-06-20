@@ -1,7 +1,7 @@
-<%- include ('partial/header') %>
+<%- include ('../partial/header') %>
 <div class="container">
   <header class="jumbotron mt-4">
-    <h1 class="display-3 font-weight-bold">Welcome To YelpCamp</h1>
+    <h1 class="display-3">Welcome To YelpCamp</h1>
 
     <p class="lead">
       View our handpicked campgrounds from all over the world!!!
@@ -15,7 +15,7 @@
   </header>
   <div class="row" style="display: flex; flex-wrap: wrap;">
     <% data.forEach(function(data){ %>
-    <div class="col-md-4 col-sm-6">
+    <div class="col-md-4 col-sm-6 mb-3">
       <div class="card">
         <img class="card-img-top" src="<%=data.img%>" alt="<%=data.name%>" />
         <div class="card-body">
@@ -30,4 +30,4 @@
   </div>
 </div>
 
-<%- include ('partial/footer') %>
+<%- include ('../partial/footer') %>
